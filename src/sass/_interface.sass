@@ -1,3 +1,43 @@
+*
+   box-sizing: 
+   
+   &:focus
+      outline: none
+
 html, body
    +bold
    font-size: 14px
+   color: $base-text-color
+
+img
+   max-width: 100%
+
+h1, h2, h3, h4, h5, h6
+   margin: 0
+
+ul, li
+   list-style-type: none
+   margin: 0
+   padding: 0
+
+a
+   text-decoration: none
+   transition: 0.2s
+
+p
+   margin: 0
+
+.container
+   width: 1200px
+   margin: auto
+
+.btn
+   display: block
+   max-width: 178px
+   border-radius: 25px
+   text-align: center
+   padding: 20px 33px
+
+   &_green
+      color: $white
+      background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%);

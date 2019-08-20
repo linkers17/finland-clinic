@@ -1,0 +1,21 @@
+.main-nav
+
+   &__list
+      display: flex
+      padding-left: 23px
+
+      & > *
+
+         &:not(:last-child)
+            padding-right: 45px
+
+   &__link
+      color: $title-color
+
+@media (min-width: 992px)
+   .main-nav
+
+      &__link
+
+         &:hover
+            color: $link-color

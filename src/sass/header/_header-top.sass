@@ -1,0 +1,22 @@
+.header-top
+   display: flex
+   justify-content: space-between
+   align-items: center
+
+.callback
+   display: flex
+   align-items: center
+
+   &__number
+      font-size: 1.22em
+      line-height: 22px
+      color: $number-text-color
+      margin-right: 35px
+
+@media (min-width: 992px) 
+   .callback
+
+      &__number
+
+         &:hover
+            color: $link-color
