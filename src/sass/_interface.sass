@@ -27,17 +27,49 @@ a
 p
    margin: 0
 
+.section
+
+   &-title
+      font-size: 2.1429em
+      color: $title-color
+      line-height: 22px
+      text-align: center
+
+   &__title
+      margin-bottom: 25px
+
+   &-subtitle
+      color: $subtitle-color
+      line-height: 22px
+      display: block
+      text-align: center
+
+$container-size: 1200px
+
 .container
-   width: 1200px
+   width: $container-size
    margin: auto
 
 .btn
    display: block
-   max-width: 178px
+   width: 178px
    border-radius: 25px
    text-align: center
-   padding: 20px 33px
+   padding: 17px 0
 
    &_green
       color: $white
       background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%);
+
+   &_white
+      color: $link-color
+      background-color: $white
+
+   &_grey
+      color: $link-color
+      background-color: $bg-grey
+
+.title
+   color: $title-color
+   font-size: 43px
+   line-height: 48px

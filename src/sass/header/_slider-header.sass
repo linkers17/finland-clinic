@@ -1,0 +1,36 @@
+.slider-header
+
+   &__item
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+   &__text
+      max-width: 587px
+      width: 100%
+
+   &__image
+      flex: 1
+
+   &__bg
+      position: absolute
+      right: 0
+      top: 0
+      width: 50%
+      z-index: -1
+
+   &__dots
+      margin-top: 44px
+      display: flex
+      width: 28px
+
+      &-item
+         width: 5px
+         height: 2px
+         background-color: $link-color
+
+         &:not(:last-child)
+            margin-right: 2px
+
+         &_active
+            width: 14px

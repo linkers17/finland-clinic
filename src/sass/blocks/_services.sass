@@ -1,0 +1,41 @@
+.services
+
+   &__block
+      margin-top: 75px
+      margin-bottom: 65px
+   
+   &-block
+      display: flex
+      justify-content: space-between
+
+      &__item
+         position: relative
+         flex-basis: 22%
+         display: flex
+         justify-content: center
+         align-items: center
+         flex-direction: column
+         box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
+         border: 1px solid rgba(0, 0, 0, 0.02)
+         padding: 66px 0 41px
+         color: #242424
+         opacity: 0.5
+         transition: 0.2s
+
+      &__title
+         display: block
+         margin-top: 20px
+
+   &__btn
+      margin: auto
+
+@media (min-width: 992px)
+   .services
+
+      &-block
+
+         &__item
+            &:hover
+               opacity: 1
+               cursor: pointer
+               box-shadow: 0 10px 38px rgba(62, 126, 241, 0.14)
