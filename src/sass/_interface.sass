@@ -59,7 +59,7 @@ $container-size: 1200px
 
    &_green
       color: $white
-      background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%);
+      background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%)
 
    &_white
       color: $link-color
@@ -69,7 +69,46 @@ $container-size: 1200px
       color: $link-color
       background-color: $bg-grey
 
+   &_big
+      background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%)
+      color: $white
+      border: none
+      width: 100%
+
+.map
+   height: 478px
+   width: 100%
+   margin-bottom: 35px
+
 .title
    color: $title-color
    font-size: 43px
    line-height: 48px
+
+.input
+   width: 416px
+   background-color: $about-icon-bg
+   padding: 29px 0 26px 43px
+   line-height: 24px
+   border: 1px solid $about-icon-bg
+   color: $base-text-color
+   transition: 0.3s
+
+   &::-webkit-input-placeholder
+      color: $base-text-color
+
+   &:-moz-placeholder
+      color: $base-text-color
+
+   &::-moz-placeholder
+      color: $base-text-color
+
+   &:-ms-input-placeholder
+      color: $base-text-color
+
+   &:focus
+      border-color: $link-color
+
+textarea
+   resize: none
+   height: 170px

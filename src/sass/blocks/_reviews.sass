@@ -1,0 +1,120 @@
+.reviews
+   background: #f0f3f8 url('../img/review-bg.jpg') no-repeat
+   background-size: cover
+   padding: 136px 0
+
+   &__slider
+      padding: 0 50px 0 66px
+
+   &__title
+      line-height: 32px
+      margin-bottom: 75px
+      
+      &_blue
+         display: block
+         color: $link-color
+
+.slider-reviews
+
+   &__wrap-item
+      max-width: 600px
+      padding-left: 10px
+
+   &__item
+      display: flex
+      align-items: center
+
+   &__col-one
+      margin: 0 50px 23px 0
+
+   &__col-two
+      max-width: 410px
+
+   &__photo
+      display: inline-block
+      box-shadow: 0 10px 38px rgba(62, 126, 241, 0.22)
+      border-radius: 50%
+      height: 86px
+      margin-bottom: 44px
+
+   &__review
+      font-size: 1.0714em
+      line-height: 24px
+      margin-bottom: 30px
+
+   &__name
+      display: block
+      color: $link-color
+      line-height: 24px
+      font-size: 1.1429em
+
+   &__date
+      display: block
+      line-height: 24px
+
+   &__controls
+      display: flex
+      justify-content: center
+      align-items: center
+
+      .arrow-prev, .arrow-next
+         fill: #bccacc
+
+         &:hover
+            fill: $link-color
+
+   &__arrow-prev, &__arrow-next
+      display: flex
+      align-items: center
+
+      &:hover
+         cursor: pointer
+
+   &__dots
+      margin: 0 50px
+
+      ul
+         position: static
+         display: flex
+         align-items: center
+
+         li
+            display: inline-block
+            margin: 0
+            height: 12px
+            width: 12px
+
+            &:not(:last-child)
+               margin-right: 10px
+
+            button
+               height: 12px
+               width: 12px
+               border-radius: 50%
+               transition: 0.3s
+
+               &:hover
+                  background-color: #d3defc
+
+                  &:before
+                     background-color: $link-color
+
+               &:before
+                  content: ''
+                  width: 4px
+                  height: 4px
+                  border-radius: 50%
+                  background-color: #bcc1cc
+                  opacity: 1
+                  top: 50%
+                  left: 50%
+                  margin: -2px 0 0 -2px
+                  transition: 0.3s
+
+         li.slick-active
+
+            button
+               background-color: #d3defc
+               
+               &:before
+                  background-color: $link-color

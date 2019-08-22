@@ -1,0 +1,85 @@
+.contacts
+   padding: 140px 0
+
+   &-block
+      display: flex
+      justify-content: space-between
+
+   &__form, &__info
+      flex-basis: 47%
+   
+   &-form, &-info
+      display: flex
+      flex-direction: column
+
+   &__input
+      margin-bottom: 15px
+
+   &__textarea
+      margin-bottom: 40px
+
+   &-form
+
+      &__title
+         text-align: left
+         margin-bottom: 55px
+
+      &__subtitle
+         text-align: left
+         padding-right: 55px
+         margin-bottom: 90px
+
+      &__form
+         box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
+         padding: 80px 70px
+
+   &-info
+
+      &__map-block
+         box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
+         padding-bottom: 30px
+         margin-bottom: 60px
+
+      &__description
+         padding: 0 45px
+         font-size: 1.0714em
+         line-height: 24px
+
+      &__title
+         text-align: left
+         margin-bottom: 40px
+
+      &__data
+         display: flex
+         justify-content: space-between
+
+      &__subtitle
+         color: $link-color
+         line-height: 22px
+         margin-bottom: 15px
+
+      &__numbers
+         max-width: 155px
+
+      &__address
+         max-width: 200px
+
+      &__email
+         max-width: 115px
+
+      &__link
+         line-height: 24px
+         +reg
+         color: #242424
+         white-space: nowrap
+
+      &__address-name
+         line-height: 24px
+         +reg
+         color: #242424
+
+      &__mail
+         line-height: 24px
+         +reg
+         color: #242424
+         white-space: nowrap

@@ -4,6 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
    <title>Финнланд - Стоматологическая клиника</title>
    <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -68,92 +69,514 @@
    </header>
    <!-- /.header -->
 
-   <section class="visit">
-      <div class="container">
-         <h4 class="visit__question">Хотите попасть на прием? <span class="visit__question_blue">Заполните форму ниже</span></h4>
-         <div class="visit__form-wrap">
-            <form action="#" class="call-form">
-               <div class="call-form__fields">
-                  <div class="call-form__field">
-                     <img src="img/people.png" alt="" class="call-form__icon">
-                     <input type="text" class="call-form__input">
+   <main>
+
+      <section class="visit">
+         <div class="container">
+            <h4 class="visit__question">Хотите попасть на прием? <span class="visit__question_blue">Заполните форму ниже</span></h4>
+            <div class="visit__form-wrap">
+               <form action="#" class="call-form" id="visit-form">
+                  <div class="call-form__fields">
+                     <div class="call-form__field">
+                        <img src="img/people.png" alt="" class="call-form__icon">
+                        <input type="text" class="call-form__input">
+                     </div>
+                     <div class="call-form__field">
+                        <img src="img/phone.png" alt="" class="call-form__icon">
+                        <input type="tel" class="call-form__input">
+                     </div>
+                     <div class="call-form__field">
+                        <img src="img/clock.png" alt="" class="call-form__icon">
+                        <!--<a href="#" class="call-form__link">Удобное время</a>
+                        <img src="img/arrow-down.png" alt="" class="call-form__icon">-->
+                        <select name="time" id="time" class="call-form__select">
+                           <option value="" disabled="disabled">Удобное время</option>
+                           <option value="11:00">11:00</option>
+                           <option value="12:00">12:00</option>
+                           <option value="13:00">13:00</option>
+                           <option value="14:00">14:00</option>
+                           <option value="15:00">15:00</option>
+                        </select>
+                     </div>
                   </div>
-                  <div class="call-form__field">
-                     <img src="img/phone.png" alt="" class="call-form__icon">
-                     <input type="tel" class="call-form__input">
+                  <a href="#" class="btn btn_white call-form__btn">Записаться на прием</a>
+               </form>
+            </div>
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /.visit -->
+
+      <section class="services">
+         <div class="container">
+            <h2 class="section-title section__title">Наши услуги</h2>
+            <span class="section-subtitle section__subtitle">Репутация важнее денег. Над ней не властны ни инфляция, ни кризисы.</span>
+            <div class="services-block services__block">
+               <div class="services-block__item">
+                  <img src="img/icon-1.svg" alt="" class="services-block__img">
+                  <span class="services-block__title">Лечение зубов</span>
+                     <span class="services-block__btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                        <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+                     </svg>
+                  </span>
+               </div>
+               <div class="services-block__item">
+                  <img src="img/icon-2.svg" alt="" class="services-block__img">
+                  <span class="services-block__title">Детский прием</span>
+                  <span class="services-block__btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                        <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+                     </svg>
+                  </span>
+               </div>
+               <div class="services-block__item">
+                  <img src="img/icon-3.svg" alt="" class="services-block__img">
+                  <span class="services-block__title">Протезирование</span>
+                  <span class="services-block__btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                        <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+                     </svg>
+                  </span>
+               </div>
+               <div class="services-block__item">
+                  <img src="img/icon-4.svg" alt="" class="services-block__img">
+                  <span class="services-block__title">Ортодонтия</span>
+                  <span class="services-block__btn">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                        <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+                     </svg>
+                  </span>
+               </div>
+            </div>
+            <a href="#" class="btn btn_grey services__btn">Все услуги</a>
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /.section services -->
+      <section class="about">
+         <div class="container">
+            <h2 class="section-title section__title">Почему мы?</h2>
+            <div class="about-block about__block">
+               <div class="about-block__item">
+                  <div class="about-block__img">
+                     <img src="img/equpment.png" alt="" class="about-block__icon">
                   </div>
-                  <div class="call-form__field">
-                     <img src="img/clock.png" alt="" class="call-form__icon">
-                     <!--<a href="#" class="call-form__link">Удобное время</a>
-                     <img src="img/arrow-down.png" alt="" class="call-form__icon">-->
-                     <select name="time" id="time" class="call-form__select">
-                        <option value="" disabled="disabled">Удобное время</option>
-                        <option value="11:00">11:00</option>
-                        <option value="12:00">12:00</option>
-                        <option value="13:00">13:00</option>
-                        <option value="14:00">14:00</option>
-                        <option value="15:00">15:00</option>
-                     </select>
+                  <div class="about-block__text">
+                     <h3 class="about-block__title">Современное оборудование</h3>
+                     <span class="about-block__description">
+                        Только самое современное оборудование, в состав которого входит новейший цифровой рентгеновский аппарат
+                     </span>
                   </div>
                </div>
-               <a href="#" class="btn btn_white call-form__btn">Записаться на прием</a>
-            </form>
+               <div class="about-block__item">
+                  <div class="about-block__img">
+                     <img src="img/support.png" alt="" class="about-block__icon">
+                  </div>
+                  <div class="about-block__text">
+                     <h3 class="about-block__title">Опытное руководоство и ведущие специалисты</h3>
+                     <span class="about-block__description">
+                        Нами руководит опытный врач, стаж работы которого в стоматологии более 15 лет. 
+                     </span>
+                  </div>
+               </div>
+               <div class="about-block__item">
+                  <div class="about-block__img">
+                     <img src="img/money.png" alt="" class="about-block__icon">
+                  </div>
+                  <div class="about-block__text">
+                     <h3 class="about-block__title">Демократичные цены</h3>
+                     <span class="about-block__description">
+                        Ценовая политика в нашей стоматологической клинике весьма демократичная и подойдет каждому клиенту
+                     </span>
+                  </div>
+               </div>
+               <div class="about-block__item">
+                  <div class="about-block__img">
+                     <img src="img/sequrity.png" alt="" class="about-block__icon">
+                  </div>
+                  <div class="about-block__text">
+                     <h3 class="about-block__title">Безопасность лечения</h3>
+                     <span class="about-block__description">
+                        Одноразовые расходные материалы, лучшие стерилизационные системы. Мы гарантируем безопасность лечения
+                     </span>
+                  </div>
+               </div>
+            </div>
          </div>
-      </div>
-      <!-- /.container -->
-   </section>
-   <!-- /.visit -->
+         <!-- /.container -->
+      </section>
+      <!-- /.about -->
+      <section class="reviews">
+         <div class="container">
+            <h2 class="section-title reviews__title">Отзывы <span class="reviews__title_blue">наших пациентов</span> </h2>
+            <div class="slider-reviews reviews__slider">
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-1.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Елизавета Бубновна</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-2.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Анастасия Петрова</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-   <section class="services">
-      <div class="container">
-         <h2 class="section-title section__title">Наши услуги</h2>
-         <span class="section-subtitle section__subtitle">Репутация важнее денег. Над ней не властны ни инфляция, ни кризисы.</span>
-         <div class="services-block services__block">
-            <div class="services-block__item">
-               <img src="img/icon-1.svg" alt="" class="services-block__img">
-               <span class="services-block__title">Лечение зубов</span>
-               <span class="services-block__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                     <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
-                  </svg>
-               </span>
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-1.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Елизавета Бубновна</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-2.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Анастасия Петрова</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-1.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Елизавета Бубновна</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="slider-reviews__wrap-item">
+                  <div class="slider-reviews__item">
+                     <div class="slider-reviews__col-one">
+                        <div class="slider-reviews__col-one-row">
+                           <img src="img/quote.png" alt="" class="slider-reviews__quote">
+                        </div>
+                     </div>
+                     <div class="slider-reviews__col-two">
+                        <div class="slider-reviews__photo">
+                           <img src="img/review-user-2.png" alt="">
+                        </div>
+                        <div class="slider-reviews__review">
+                           <p class="slider-reviews__text">
+                              Спасибо вашей стоматологии за быструю и качественную работу. Лечились у вас всей семьей и остались очень довольны! Теперь будем обслуживаться только у вас.
+                           </p>
+                           <p class="slider-reviews__text">
+                              Советуем всем посетить стоматологию “Финнланд”
+                           </p>
+                        </div>
+                        <div class="slider-reviews__author">
+                           <span class="slider-reviews__name">Анастасия Петрова</span>
+                           <span class="slider-reviews__date">01.01.2018</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
             </div>
-            <div class="services-block__item">
-               <img src="img/icon-2.svg" alt="" class="services-block__img">
-               <span class="services-block__title">Детский прием</span>
-               <span class="services-block__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                     <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+            <!-- /.slider-reviews -->
+            <div class="slider-reviews__controls">
+               <div class="slider-reviews__arrow-prev">
+                  <svg class="arrow-prev" xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                     <g><g>
+                     <path d="M3 5.635L2.562 6 3 6.364zM.36 5.23l6-5 1.28 1.537L3.762 5H13v2H3.762L7.64 10.23l-1.28 1.537-6-5L1 6zM14 7V5h2v2z"/>
+                     <path d="M3 5.635L2.562 6 3 6.364zM.36 5.23l6-5 1.28 1.537L3.762 5H13v2H3.762L7.64 10.23l-1.28 1.537-6-5L1 6zM14 7V5h2v2z"/></g></g>
                   </svg>
-               </span>
-            </div>
-            <div class="services-block__item">
-               <img src="img/icon-3.svg" alt="" class="services-block__img">
-               <span class="services-block__title">Протезирование</span>
-               <span class="services-block__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                     <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
+               </div>
+               <div class="slider-reviews__dots"></div>
+               <div class="slider-reviews__arrow-next">
+                  <svg class="arrow-next" xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
+                     <g><g>
+                     <path d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/>
+                     <path d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
                   </svg>
-               </span>
-            </div>
-            <div class="services-block__item">
-               <img src="img/icon-4.svg" alt="" class="services-block__img">
-               <span class="services-block__title">Ортодонтия</span>
-               <span class="services-block__btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="0 0 16 12">
-                     <g><g><path fill="#2acfd0" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/><path fill="#fff" d="M3 7V5h9.238L8.36 1.768 9.64.232l6 5L15 6l.64.768-6 5-1.28-1.537L12.238 7zm10-1.365v.73L13.438 6zM0 7V5h2v2z"/></g></g>
-                  </svg>
-               </span>
+               </div>
             </div>
          </div>
-         <a href="#" class="btn btn_grey services__btn">Все услуги</a>
+         <!-- /.container -->
+      </section>
+      <!-- /.reviews -->
+      <section class="contacts">
+         <div class="container">
+            <div class="contacts-block">
+               <div class="contacts__form contacts-form">
+                  <div class="contacts-form__text">
+                     <h2 class="section-title contacts-form__title">Остались вопросы?</h2>
+                     <span class="section-subtitle contacts-form__subtitle">
+                        Заполните форму и наши сотрудники свяжутся с вами в ближайшее время и ответят на все интересующие вас вопросы
+                     </span>
+                  </div>
+                  <div class="contacts-form__form">
+                     <form action="#" class="contacts-form-js" id="contacts-form">
+                        <input type="text" name="username" class="input contacts__input" placeholder="Анастасия">
+                        <input type="tel" name="userphone" class="input contacts__input" placeholder="8 (999) 123 45 58">
+                        <textarea name="usermessage" class="input contacts__textarea" id="usermessage" cols="30" rows="10" placeholder="Ваш вопрос..."></textarea>
+                        <button class="btn btn_big">Отправить запрос</button>
+                     </form>
+                  </div>
+               </div>
+               <div class="contacts__info contacts-info">
+                  <div class="contacts-info__map-block">
+                     <div class="map" id="map">
+                        
+                     </div>
+                     <p class="contacts-info__description">
+                        К нам очень легко добраться. Вы можете связаться с нами по укзанным контактам или же заполнить форму и наши сотрудники проконсультируют вас по всем вопросам
+                     </p>
+                  </div>
+                  <div class="contacts-info__info-block">
+                     <h2 class="contacts-info__title section-title">Контактная информация</h2>
+                     <div class="contacts-info__data">
+                        <div class="contacts-info__numbers">
+                           <h3 class="contacts-info__subtitle">Номера телефонов:</h3>
+                           <a class="contacts-info__link" href="tel:83902546325">+7 (390) 254 63 25</a>
+                           <a class="contacts-info__link" href="tel:83904771249">+7 (390) 477 12 49</a>
+                        </div>
+                        <div class="contacts-info__address">
+                           <h3 class="contacts-info__subtitle">Адрес:</h3>
+                           <span class="contacts-info__address-name">
+                              г. Красноярск, район Центр, <br> ул. Тельмана, д. 35
+                           </span>
+                        </div>
+                        <div class="contacts-info__email">
+                           <h3 class="contacts-info__subtitle">E-mail:</h3>
+                           <a href="mailto:finland24@mail.ru" class="contacts-info__mail">finland24@mail.ru</a>
+                           <a href="mailto:finland24@mail.ru" class="contacts-info__mail">finland24@mail.ru</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.container -->
+      </section>
+      <!-- /.contacts -->
+
+   </main>
+
+   <footer class="footer">
+      <div class="container">
+         <div class="footer-top footer__top">
+            <h2 class="section-title footer-top__title">Запишитесь на прием прямо сейчас!</h2>
+            <span class="section-subtitle footer-top__subtitle">
+               Отправьте заявку на прием в нашу стоматологическую клинику и наши сотрудники свяжутся с вами в ближайшее время
+            </span>
+            <div class="footer-top__form">
+               <form action="#" class="call-form" id="footer-form">
+                  <div class="call-form__fields">
+                     <div class="call-form__field">
+                        <img src="img/people.png" alt="" class="call-form__icon">
+                        <input type="text" class="call-form__input">
+                     </div>
+                     <div class="call-form__field">
+                        <img src="img/phone.png" alt="" class="call-form__icon">
+                        <input type="tel" class="call-form__input">
+                     </div>
+                     <div class="call-form__field">
+                           <img src="img/clock.png" alt="" class="call-form__icon">
+                        <!--<a href="#" class="call-form__link">Удобное время</a>
+                        <img src="img/arrow-down.png" alt="" class="call-form__icon">-->
+                        <select name="time" id="time" class="call-form__select">
+                           <option value="" disabled="disabled">Удобное время</option>
+                           <option value="11:00">11:00</option>
+                           <option value="12:00">12:00</option>
+                           <option value="13:00">13:00</option>
+                           <option value="14:00">14:00</option>
+                           <option value="15:00">15:00</option>
+                        </select>
+                     </div>
+                  </div>
+                  <a href="#" class="btn btn_white call-form__btn">Записаться на прием</a>
+               </form>
+            </div>                
+         </div>
+         <!-- /.footer-top -->
+         <div class="footer-middle footer__middle">
+            <div class="footer-middle__slogan">
+               <div class="logo footer-middle__logo">
+                  <a href="/">
+                     <img src="img/logo.png" alt="Логотип">
+                  </a>
+               </div>
+               <span class="footer-middle__slogan-text">
+                  Репутация важнее денег. Над ней не властны ни инфляции, ни кризисы.
+               </span>
+            </div>
+            <div class="footer-middle__about">
+               <h3 class="footer-middle__list-title">О компании</h3>
+               <ul class="footer-middle__list">
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Сотрудники</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Отзывы</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Партнеры</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Акции и скидки</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Вакансии</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer-middle__services">
+               <h3 class="footer-middle__list-title">Наши услуги</h3>
+               <ul class="footer-middle__list footer-middle__list_services">
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Лечение зубов</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Ортодонтия</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Детский прием</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Профессиональная гигиена</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Протезирование</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link">Отбеливание зубов</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="#" class="footer-middle__link footer-middle__link_blue">Прайс-лист</a>
+                  </li>
+               </ul>
+            </div>
+            <div class="footer-middle__contacts">
+               <h3 class="footer-middle__list-title">Контакты</h3>
+               <ul class="footer-middle__list">
+                  <li class="footer-middle__item">
+                     <a href="mailto:finland24@mail.ru" class="footer-middle__link footer-middle__link_blue">finland24@mail.ru</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="tel:83902546325" class="footer-middle__link">+7 (390) 254 63 25</a>
+                  </li>
+                  <li class="footer-middle__item">
+                     <a href="tel:83904771249" class="footer-middle__link">+7 (390) 477 12 49</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- /.footer-middle -->
+         <div class="footer-bottom footer__bottom">
+            <span class="footer-bottom__copyright">
+               &copy; 2012-2019 Стоматологическая студия «Финнланд»
+            </span>
+            <span class="footer-bottom__author-site">
+               Создание сайта: Glo Academy
+            </span>
+         </div>
       </div>
       <!-- /.container -->
-   </section>
-   <!-- /.section services -->
+   </footer>
+   <!-- /.footer -->
 
    <script src="js/jquery-3.4.1.min.js"></script>
    <script src="js/slick.min.js"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=c0587048-f24d-4d05-9359-e1cc03685d83&lang=ru_RU" type="text/javascript"></script>
    <script src="js/main.js"></script>
 </body>
 </html>

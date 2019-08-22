@@ -1,4 +1,5 @@
 .services
+   padding-bottom: 90px
 
    &__block
       margin-top: 75px
@@ -17,7 +18,7 @@
          flex-direction: column
          box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
          border: 1px solid rgba(0, 0, 0, 0.02)
-         padding: 66px 0 41px
+         padding: 66px 0 57px
          color: #242424
          opacity: 0.5
          transition: 0.2s
@@ -25,6 +26,20 @@
       &__title
          display: block
          margin-top: 20px
+
+      &__btn
+         position: absolute
+         bottom: -22px
+         left: 50%
+         transform: translateX(-50%)
+         display: none
+         justify-content: center
+         align-items: center
+         position: absolute
+         background-color: $link-color
+         width: 43px
+         height: 43px
+         border-radius: 50%
 
    &__btn
       margin: auto
@@ -39,3 +54,6 @@
                opacity: 1
                cursor: pointer
                box-shadow: 0 10px 38px rgba(62, 126, 241, 0.14)
+
+               & .services-block__btn
+                  display: flex

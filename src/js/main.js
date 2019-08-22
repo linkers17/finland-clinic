@@ -18,4 +18,36 @@ $(function() {
 
    });*/
 
+   $('.slider-reviews').slick({
+
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      dots: true,
+      appendDots: $('.slider-reviews__dots'),
+      prevArrow: $('.slider-reviews__arrow-prev'),
+      nextArrow: $('.slider-reviews__arrow-next')
+
+   });
+
+   function yamaps() {
+
+      ymaps.ready(init);
+      function init(){ 
+         // Создание карты.    
+         var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [56.05006155, 92.96999190],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 16
+         });
+      }
+
+   }
+
+   yamaps();
+
 });

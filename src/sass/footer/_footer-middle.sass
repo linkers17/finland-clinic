@@ -1,0 +1,39 @@
+.footer-middle
+   display: flex
+   justify-content: space-between
+
+   &__logo
+      margin-bottom: 30px
+
+   &__slogan-text
+      display: block
+      max-width: 175px
+      line-height: 22px
+
+   &__list
+      display: flex
+      flex-direction: column
+
+      &-title
+         font-size: 1.0714em
+         line-height: 22px
+         color: $title-color
+         margin-bottom: 15px
+
+      &_services
+         flex-direction: row
+         flex-wrap: wrap
+         max-width: 420px
+
+         & .footer-middle__item
+            flex-basis: 50%
+
+   &__item
+      line-height: 30px
+
+   &__link
+      color: $base-text-color
+
+      &_blue
+         color: $link-color
+         text-decoration: underline
