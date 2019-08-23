@@ -3,12 +3,22 @@
    justify-content: space-between
 
    &__logo
-      margin-bottom: 30px
+      margin: 25px 0
 
    &__slogan-text
       display: block
       max-width: 175px
       line-height: 22px
+
+   &__about
+      margin-left: 101px
+
+   &__services
+      width: 450px
+      padding-left: 40px
+
+   &__contacts
+      margin-right: 11px
 
    &__list
       display: flex
@@ -18,12 +28,11 @@
          font-size: 1.0714em
          line-height: 22px
          color: $title-color
-         margin-bottom: 15px
+         margin-bottom: 5px
 
       &_services
          flex-direction: row
          flex-wrap: wrap
-         max-width: 420px
 
          & .footer-middle__item
             flex-basis: 50%
@@ -37,3 +46,18 @@
       &_blue
          color: $link-color
          text-decoration: underline
+
+@media (min-width: 992px)
+
+   .footer-middle
+
+      &__link
+
+         &:hover
+            color: $link-color
+
+         &_blue
+
+            &:hover
+               text-decoration: none
+               opacity: 0.9

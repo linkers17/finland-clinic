@@ -1,10 +1,7 @@
 .reviews
    background: #f0f3f8 url('../img/review-bg.jpg') no-repeat
    background-size: cover
-   padding: 136px 0
-
-   &__slider
-      padding: 0 50px 0 66px
+   padding: 132px 0 143px 0
 
    &__title
       line-height: 32px
@@ -18,7 +15,12 @@
 
    &__wrap-item
       max-width: 600px
-      padding-left: 10px
+
+      &:nth-child(odd)
+         padding: 0 37px 0 68px
+
+      &:nth-child(even)
+         padding: 0 45px 0 60px
 
    &__item
       display: flex
@@ -40,7 +42,7 @@
    &__review
       font-size: 1.0714em
       line-height: 24px
-      margin-bottom: 30px
+      margin-bottom: 32px
 
    &__name
       display: block
@@ -56,19 +58,14 @@
       display: flex
       justify-content: center
       align-items: center
+      margin-top: 75px
 
       .arrow-prev, .arrow-next
          fill: #bccacc
 
-         &:hover
-            fill: $link-color
-
    &__arrow-prev, &__arrow-next
       display: flex
       align-items: center
-
-      &:hover
-         cursor: pointer
 
    &__dots
       margin: 0 50px
@@ -85,19 +82,13 @@
             width: 12px
 
             &:not(:last-child)
-               margin-right: 10px
+               margin-right: 4px
 
             button
                height: 12px
                width: 12px
                border-radius: 50%
                transition: 0.3s
-
-               &:hover
-                  background-color: #d3defc
-
-                  &:before
-                     background-color: $link-color
 
                &:before
                   content: ''
@@ -118,3 +109,32 @@
                
                &:before
                   background-color: $link-color
+
+@media (min-width: 992px)
+   .slider-reviews
+
+      &__controls
+
+         .arrow-prev, .arrow-next
+
+            &:hover
+               fill: $link-color
+
+      &__arrow-prev, &__arrow-next
+
+         &:hover
+            cursor: pointer
+
+      &__dots
+
+         ul
+
+            li
+
+               button
+
+                  &:hover
+                     background-color: #d3defc
+
+                     &:before
+                        background-color: $link-color

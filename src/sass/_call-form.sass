@@ -14,6 +14,18 @@
       color: $white
       line-height: 33px
 
+      &::-webkit-input-placeholder
+         color: $white
+
+      &:-moz-placeholder
+         color: $white
+
+      &::-moz-placeholder
+         color: $white
+
+      &:-ms-input-placeholder
+         color: $white
+
    &__field
       display: flex
       align-items: center
@@ -30,3 +42,20 @@
 
    &__link
       color: $white
+
+   &__select
+      border: none
+      background: transparent url(../img/arrow-down.png) no-repeat right center
+      color: $white
+      appearance: none
+      padding-right: 15px
+
+@media (min-width: 992px)
+   .call-form
+
+      &__select
+
+         &:hover
+            color: $white !important
+            cursor: pointer
+            background-color: #3895e7 !important

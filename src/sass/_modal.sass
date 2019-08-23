@@ -1,0 +1,113 @@
+.modal
+   position: fixed
+   left: 0
+   top: 0
+   width: 100%
+   height: 100%
+   background-color: rgba(0, 0, 0, 0.5)
+   display: none
+
+   &_active
+      display: flex
+
+   &__dialog
+      position: relative
+      margin: auto
+      max-width: 570px
+      width: 90%
+      min-width: 200px
+      background-color: $white
+      padding: 40px
+
+   &__close-btn
+      position: absolute
+      padding: 0
+      top: 20px
+      right: 20px
+      width: 30px
+      height: 30px
+      border: none
+      background-color: transparent
+
+   &__text
+      margin-bottom: 30px
+
+   &__title
+      margin-bottom: 30px
+
+   &__subtitle
+      margin-bottom: 30px
+      max-width: 80%
+      margin: auto
+
+   &__form
+      padding: 0
+
+   &__input
+      display: block
+      margin: auto
+      margin-bottom: 15px
+      padding: 15px
+
+   &__textarea
+      display: block
+      margin: auto
+      margin-bottom: 25px
+      padding: 15px
+      height: 90px
+
+   &__submit
+      width: 50%
+      margin: auto
+
+.success
+   display: none
+
+   &_active
+      display: flex
+
+   &-dialog
+      position: relative
+      margin: auto
+      max-width: 400px
+      width: 90%
+      min-width: 200px
+      background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%)
+      padding: 40px
+      color: $white
+
+      &__message
+         display: block
+         font-size: 2.1em
+         text-align: center
+         line-height: 1.4
+         margin-bottom: 40px
+
+      &__smile
+         display: block
+         width: 40%
+         margin: auto
+
+      &__icon
+         fill: $white
+
+
+@media (min-width: 992px)
+   .modal
+
+      &__submit
+
+         &:hover
+            cursor: pointer
+            background: linear-gradient(-21deg, $gradient-color 0%, $link-color 100%)
+
+      &__close-btn
+
+         &:hover
+            cursor: pointer
+
+            .circle
+               fill: $gradient-color
+
+            .times
+               fill: $link-color

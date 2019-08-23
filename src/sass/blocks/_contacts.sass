@@ -1,12 +1,12 @@
 .contacts
-   padding: 140px 0
+   padding: 145px 0 140px
 
    &-block
       display: flex
       justify-content: space-between
 
    &__form, &__info
-      flex-basis: 47%
+      flex-basis: 48%
    
    &-form, &-info
       display: flex
@@ -14,40 +14,45 @@
 
    &__input
       margin-bottom: 15px
+      width: 100%
 
    &__textarea
       margin-bottom: 40px
+      width: 100%
 
    &-form
 
       &__title
          text-align: left
-         margin-bottom: 55px
+         margin-bottom: 58px
 
       &__subtitle
          text-align: left
-         padding-right: 55px
+         padding-right: 65px
          margin-bottom: 90px
 
       &__form
          box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
-         padding: 80px 70px
+         padding: 76px 85px 82px 74px
 
    &-info
 
       &__map-block
          box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
-         padding-bottom: 30px
+         padding-bottom: 28px
          margin-bottom: 60px
 
       &__description
-         padding: 0 45px
+         padding: 0 50px
          font-size: 1.0714em
          line-height: 24px
 
+      &__info-block
+         margin-left: -4px
+
       &__title
          text-align: left
-         margin-bottom: 40px
+         margin-bottom: 38px
 
       &__data
          display: flex
@@ -56,16 +61,19 @@
       &__subtitle
          color: $link-color
          line-height: 22px
-         margin-bottom: 15px
+         margin-bottom: 5px
+         font-size: 1em
 
       &__numbers
-         max-width: 155px
+         max-width: 135px
 
       &__address
          max-width: 200px
+         margin-left: -10px
 
       &__email
          max-width: 115px
+         margin-right: 14px
 
       &__link
          line-height: 24px
@@ -83,3 +91,14 @@
          +reg
          color: #242424
          white-space: nowrap
+
+@media (min-width: 992px)
+
+   .contacts
+
+      &-info
+
+         &__link, &__mail
+
+            &:hover
+               color: $link-color
