@@ -232,6 +232,16 @@ $(function() {
       loop: true,
       navigation: {
          nextEl: '.services-block__btn'
+      },
+
+      breakpoints: {
+
+         1239: {
+
+            spaceBetween: 50
+
+         }
+
       }
 
    });
@@ -248,7 +258,7 @@ $(function() {
 
    });
 
-   function yamaps() {
+   /*function yamaps() {
 
       ymaps.ready(init);
       function init(){ 
@@ -267,6 +277,6 @@ $(function() {
 
    }
 
-   yamaps();
+   yamaps();*/
 
 });
