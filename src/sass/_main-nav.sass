@@ -24,6 +24,7 @@
    .main-nav
       position: relative
       order: 4
+      border-top-right-radius: 30px
 
       &__btn
          display: block
@@ -75,9 +76,16 @@
 
          .main-nav__list
             display: block
+            opacity: 1
+            transform: scale(1) translate(0%)
+            visibility: visible
 
       &__list
-         display: none
+         transition: 0.3s
+         transform: scale(0) translate(0%)
+         transform-origin: right top
+         opacity: 0
+         visibility: hidden
          position: absolute
          padding: 30px
          top: 0
