@@ -223,11 +223,28 @@ $(function() {
 
    });
 
+   // Подключение Swiper слайдера
+
    var sliderServices = new Swiper('.slider-services', {
 
       spaceBetween: 45,
       slidesPerView: 4,
-      loop: true
+      loop: true,
+      navigation: {
+         nextEl: '.services-block__btn'
+      }
+
+   });
+
+   // Плавный переход по якорным ссылкам
+   $('.main-nav').on('click', 'a', function(e) {
+
+      e.preventDefault();
+
+      var id = $(this).attr('href');
+      var top = $(id).offset().top;
+
+      $('html, body').animate({scrollTop: top}, 1500);
 
    });
 
