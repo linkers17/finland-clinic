@@ -16,11 +16,21 @@ $(function() {
 
    }
 
-   $('.price-js, .callback__btn, .services-block__item, .services__btn').on('click', showModal);
+   $('.price-js, .callback__btn, .services__btn').on('click', showModal);
 
    close.on('click', function() {
       
       modal.removeClass('modal_active');
+
+   });
+
+   $('.services-block').on('click', function(e) {
+
+      var item = e.target.closest('.services-block__item');
+
+      if (!item) return;
+
+      showModal(e);
 
    });
 
@@ -219,7 +229,17 @@ $(function() {
       dots: true,
       appendDots: $('.slider-reviews__dots'),
       prevArrow: $('.slider-reviews__arrow-prev'),
-      nextArrow: $('.slider-reviews__arrow-next')
+      nextArrow: $('.slider-reviews__arrow-next'),
+
+      responsive: [
+         {
+            breakpoint: 1199,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+            }
+         }
+      ]
 
    });
 
@@ -239,6 +259,13 @@ $(function() {
          1239: {
 
             spaceBetween: 50
+
+         },
+
+         1199: {
+
+            slidesPerView: 2,
+            spaceBetween: 93
 
          }
 
