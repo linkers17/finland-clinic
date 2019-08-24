@@ -211,22 +211,6 @@ $(function() {
    });
 
    // Подключение slick-слайдера
-/*
-   $('.slider-header').slick({
-
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      infinite: true,
-      autoplay: false,
-      autoplaySpeed: 3000,
-      dots: true,
-      dotsClass: 'slider-header__dots',
-      arrows: false,
-      fade: true,
-      lazyLoad: 'progressive'
-      //appendDots: $('.slider-header__dots')
-
-   });*/
 
    $('.slider-reviews').slick({
 
@@ -236,6 +220,14 @@ $(function() {
       appendDots: $('.slider-reviews__dots'),
       prevArrow: $('.slider-reviews__arrow-prev'),
       nextArrow: $('.slider-reviews__arrow-next')
+
+   });
+
+   var sliderServices = new Swiper('.slider-services', {
+
+      spaceBetween: 45,
+      slidesPerView: 4,
+      loop: true
 
    });
 
