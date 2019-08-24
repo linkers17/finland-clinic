@@ -267,6 +267,13 @@ $(function() {
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1
+            },
+
+            breakpoint: 991,
+            settings: {
+               arrows: false,
+               slidesToShow: 1,
+               slidesToScroll: 1
             }
          }
       ]
@@ -296,6 +303,12 @@ $(function() {
 
             slidesPerView: 2,
             spaceBetween: 93
+
+         },
+
+         991: {
+
+            spaceBetween: 70
 
          }
 

@@ -50,15 +50,10 @@
       appearance: none
       padding-right: 15px
 
-@media (min-width: 992px)
-   .call-form
-
-      &__select
-
-         &:hover
-            color: $white !important
-            cursor: pointer
-            background-color: #3895e7 !important
+      &:hover
+         color: $white !important
+         cursor: pointer
+         background-color: #3895e7 !important
 
 @media (max-width: 1239px)
    .call-form
@@ -68,3 +63,29 @@
 
       &__input
          width: 165px
+
+@media (max-width: 991px)
+   .call-form
+      max-width: 60%
+      padding: 70px 48px
+      margin: auto
+      flex-direction: column
+
+      &__fields
+         flex-direction: column
+
+      &__field
+         margin-right: 0
+         margin-bottom: 40px
+         width: 100%
+         
+         &:not(:last-child)
+            margin-right: 0
+
+      &__input
+         width: 240px
+
+      &__select
+
+         &:hover
+            background-color: #35a1e2 !important

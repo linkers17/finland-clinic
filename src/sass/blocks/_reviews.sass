@@ -151,6 +151,9 @@
          &:nth-child(odd), &:nth-child(even)
             padding: 0 35px
 
+      &__col-one-row
+         margin-top: -28px
+
 @media (max-width: 1199px)
    .slider-reviews
 
@@ -158,3 +161,23 @@
          
          &:nth-child(odd), &:nth-child(even)
             padding: 0 277.5px
+
+@media (max-width: 991px)
+   .reviews
+      padding: 50px 0
+
+      &__title
+         margin-bottom: 45px
+
+   .slider-reviews
+
+      &__wrap-item
+         
+         &:nth-child(odd), &:nth-child(even)
+            padding: 0 162.5px
+
+      &__controls
+         margin-top: 40px
+
+      &__arrow-prev, &__arrow-next
+         display: none
