@@ -1,5 +1,35 @@
 $(function() {
 
+   // Меню
+   function burgerMenu(selector) {
+
+      var menu = $(selector);
+      var btn = menu.find('.main-nav__btn');
+      var links = menu.find('.main-nav__link');
+      var overlay = menu.find('.main-nav__overlay');
+
+      btn.on('click', function(e) {
+
+         e.preventDefault();
+
+         toggleMenu();
+
+      });
+
+      links.on('click', toggleMenu);
+
+      overlay.on('click', toggleMenu);
+
+      function toggleMenu() {
+
+         menu.toggleClass('main-nav_active');
+
+      }
+
+   }
+
+   burgerMenu('.main-nav');
+
    // Маска ввода для телефона
 
    $('.phone').mask('8 (999) 999 99 99');
@@ -274,7 +304,7 @@ $(function() {
    });
 
    // Плавный переход по якорным ссылкам
-   $('.main-nav').on('click', 'a', function(e) {
+   $('.main-nav__list').on('click', 'a', function(e) {
 
       e.preventDefault();
 

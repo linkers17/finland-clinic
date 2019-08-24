@@ -19,3 +19,88 @@
 
          &:hover
             color: $link-color
+
+@media (max-width: 991px)
+   .main-nav
+      position: relative
+      order: 4
+
+      &__btn
+         display: block
+         position: relative
+         width: 50px
+         height: 50px
+         border-radius: 50%
+         background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%)
+         z-index: 30
+
+         &-lines, &-lines:before, &-lines:after
+            position: absolute
+            width: 25px
+            height: 3px
+            background-color: $white
+
+         &-lines
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+
+            &:before, &:after
+               content: ''
+
+            &:before
+               top: -7px
+
+            &:after
+               top: 7px
+
+      &_active
+
+         .main-nav__btn
+            background: transparent
+
+         .main-nav__btn-lines
+            background-color: transparent
+
+            &:before
+               top: 0
+               transform: rotate(45deg)
+
+            &:after
+               top: 0
+               transform: rotate(-45deg)
+
+         .main-nav__overlay
+            display: block
+
+         .main-nav__list
+            display: block
+
+      &__list
+         display: none
+         position: absolute
+         padding: 30px
+         top: 0
+         right: 0
+         width: 340px
+         text-align: center
+         border-radius: 30px
+         background: linear-gradient(-21deg, $link-color 0%, $gradient-color 100%)
+         z-index: 20
+
+         & > *
+            &:not(:last-child)
+               padding-right: 0
+               margin-bottom: 30px
+
+      &__link
+         color: $white
+
+      &__overlay
+         display: none
+         position: fixed
+         top: 0
+         left: 0
+         width: 100vw
+         height: 100vh
+         z-index: 10
