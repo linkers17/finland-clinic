@@ -145,8 +145,8 @@
 
    .slider-reviews
 
-      &__wrap-item
-         width: 415px !important
+      &__wrap-item .slick-slide
+         width: 415px
          
          &:nth-child(odd), &:nth-child(even)
             padding: 0 35px
@@ -181,3 +181,14 @@
 
       &__arrow-prev, &__arrow-next
          display: none
+
+@media (max-width: 767px)
+   .slider-reviews
+
+      &__wrap-item
+         
+         &:nth-child(odd)
+            padding: 0 37px 0 68px
+
+         &:nth-child(even)
+            padding: 0 45px 0 60px

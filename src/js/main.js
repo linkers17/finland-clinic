@@ -46,7 +46,7 @@ $(function() {
 
    }
 
-   $('.price-js, .callback__btn, .services__btn').on('click', showModal);
+   $('.price-js, .callback-btn, .services__btn').on('click', showModal);
 
    close.on('click', function() {
       
@@ -263,12 +263,14 @@ $(function() {
 
       responsive: [
          {
-            breakpoint: 1199,
+            breakpoint: 1200,
             settings: {
                slidesToShow: 1,
                slidesToScroll: 1
-            },
+            }
 
+         },
+         {
             breakpoint: 991,
             settings: {
                arrows: false,
@@ -276,6 +278,7 @@ $(function() {
                slidesToScroll: 1
             }
          }
+         
       ]
 
    });
@@ -309,6 +312,13 @@ $(function() {
          991: {
 
             spaceBetween: 70
+
+         },
+
+         767: {
+
+            slidesPerView: 1,
+            spaceBetween: 0
 
          }
 
