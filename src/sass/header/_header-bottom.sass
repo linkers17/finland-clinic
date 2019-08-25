@@ -15,6 +15,9 @@
       line-height: 25px
       font-size: 1.0714em
 
+   &__br
+      display: none
+
 @media (max-width: 991px)
    .header-bottom
       margin-bottom: 50px
@@ -44,3 +47,17 @@
 
       &__description
          max-width: 90%
+
+@media (max-width: 479px)
+   .header-bottom
+      margin-bottom: 25px
+
+      &__description
+         font-size: 1em
+         max-width: 100%
+
+@media (max-width: 400px)
+   .header-bottom
+
+      &__br
+         display: block
