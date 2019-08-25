@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(function() {
 
    // Меню
@@ -61,12 +63,6 @@ $(function() {
       if (!item) return;
 
       showModal(e);
-
-   });
-
-   modal.on('click', function() {
-      
-      modal.removeClass('modal_active');
 
    });
 
@@ -136,18 +132,10 @@ $(function() {
             data: $(form).serialize(),
             success: function(data) {
 
-               $('.success-js').fadeIn(2000, function() {
-                  
-                  $(this).css('display', 'flex');
-
-               });
+               $('.success-js').fadeIn(2000);
                $('.message-js').text('Ваша заявка успешно отправлена.');
                $('#visit-form input, #visit-form select').val('');
-               $('.success-js').fadeOut(5000, function() {
-                  
-                  $(this).css('display', 'none');
-
-               });
+               $('.success-js').fadeOut(5000);
 
             },
             error: function(jqXHR, textStatus) {
@@ -231,6 +219,187 @@ $(function() {
                });
                $('.message-js').text('Ваша заявка успешно отправлена.');
                $('#footer-form input, #footer-form select').val('');
+               $('.success-js').fadeOut(5000, function() {
+                  
+                  $(this).css('display', 'none');
+
+               });
+
+            },
+            error: function(jqXHR, textStatus) {
+
+               console.log(jqXHR + ': ' + textStatus);
+
+            }
+
+         })
+
+      }
+
+   });
+
+   $('#contacts-form').validate({
+
+      rules: {
+
+         username: {
+
+            required: true,
+            minlength: 2,
+            maxlength: 15
+
+         },
+
+         userphone: {
+
+            required: true
+
+         },
+
+        usermessage: {
+
+            required: true,
+            minlength: 15
+
+         }
+
+      },
+
+      messages: {
+
+         username: {
+
+            required: "Введите Ваше имя",
+            minlength: jQuery.validator.format("Минимум {0} символа"),
+            maxlength: jQuery.validator.format("Максимум {0} символов")
+
+         },
+
+         userphone: {
+
+            required: "Введите номер телефона"
+
+         },
+
+         usermessage: {
+
+            required: "Введите Ваш вопрос",
+            minlength: jQuery.validator.format("Минимум {0} символов"),
+
+         }
+
+      },
+
+      errorElement: "div",
+      errorClass: "invalid",
+
+      submitHandler: function(form) {
+
+         $.ajax({
+
+            url: 'message.php',
+            type: 'POST',
+            data: $(form).serialize(),
+            success: function(data) {
+
+               $('.success-js').fadeIn(2000, function() {
+                  
+                  $(this).css('display', 'flex');
+
+               });
+               $('.message-js').text('Благодарим Вас за вопрос.');
+               $('#contacts-form input, #contacts-form textarea').val('');
+               $('.success-js').fadeOut(5000, function() {
+                  
+                  $(this).css('display', 'none');
+
+               });
+
+            },
+            error: function(jqXHR, textStatus) {
+
+               console.log(jqXHR + ': ' + textStatus);
+
+            }
+
+         })
+
+      }
+
+   });
+
+   $('#modal-form').validate({
+
+      rules: {
+
+         username: {
+
+            required: true,
+            minlength: 2,
+            maxlength: 15
+
+         },
+
+         userphone: {
+
+            required: true
+
+         },
+
+        usermessage: {
+
+            required: true,
+            minlength: 15
+
+         }
+
+      },
+
+      messages: {
+
+         username: {
+
+            required: "Введите Ваше имя",
+            minlength: jQuery.validator.format("Минимум {0} символа"),
+            maxlength: jQuery.validator.format("Максимум {0} символов")
+
+         },
+
+         userphone: {
+
+            required: "Введите номер телефона"
+
+         },
+
+         usermessage: {
+
+            required: "Введите Ваш вопрос",
+            minlength: jQuery.validator.format("Минимум {0} символов"),
+
+         }
+
+      },
+
+      errorElement: "div",
+      errorClass: "invalid",
+
+      submitHandler: function(form) {
+
+         $.ajax({
+
+            url: 'message.php',
+            type: 'POST',
+            data: $(form).serialize(),
+            success: function(data) {
+
+               $('.success-js').fadeIn(2000, function() {
+                  
+                  $(this).css('display', 'flex');
+
+               });
+               $('.message-js').text('Благодарим Вас за вопрос.');
+               $('#modal-form input, #modal-form textarea').val('');
+               modal.removeClass('modal_active');
                $('.success-js').fadeOut(5000, function() {
                   
                   $(this).css('display', 'none');
