@@ -6,10 +6,22 @@
    &__subtitle
       margin-bottom: 70px
 
+   &__br
+      display: none
+
 @media (max-width: 991px)
    .footer-top
 
       &__subtitle
-         max-width: 60%
+         max-width: 75%
          margin: auto
          margin-bottom: 40px
+
+@media (max-width: 575px)
+   .footer-top
+
+      &__title
+         line-height: 32px
+
+      &__br
+         display: block
