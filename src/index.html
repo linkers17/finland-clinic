@@ -4,9 +4,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
    <title>Финнланд - Стоматологическая клиника</title>
    <link rel="stylesheet" href="css/style.min.css">
+   <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(55059709, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/55059709" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </head>
 <body>
    
@@ -80,17 +80,17 @@
          <div class="container">
             <h4 class="visit__question">Хотите попасть на прием? <span class="visit__question_blue">Заполните форму ниже</span></h4>
             <div class="visit__form-wrap">
-               <form action="" class="call-form" id="visit-form">
+               <form action="" class="call-form" id="visit-form" onsubmit="ym(55059709, 'reachGoal', 'request'); return true;">
                   <div class="call-form__fields">
-                     <div class="call-form__field">
+                     <div class="call-form__field input-wrap">
                         <img src="img/people.png" alt="" class="call-form__icon">
                         <input name="username" type="text" class="call-form__input" placeholder="Мария">
                      </div>
-                     <div class="call-form__field">
+                     <div class="call-form__field input-wrap">
                         <img src="img/phone.png" alt="" class="call-form__icon">
                         <input name="userphone" type="tel" class="call-form__input phone" placeholder="8 (999) 123 45 58">
                      </div>
-                     <div class="call-form__field field-time">
+                     <div class="call-form__field field-time input-wrap input-wrap__select">
                         <img src="img/clock.png" alt="" class="call-form__icon">
                         <!--<a href="#" class="call-form__link">Удобное время</a>
                         <img src="img/arrow-down.png" alt="" class="call-form__icon">-->
@@ -430,10 +430,16 @@
                      </span>
                   </div>
                   <div class="contacts-form__form">
-                     <form action="#" class="contacts-form-js" id="contacts-form">
-                        <input type="text" name="username" class="input contacts__input" placeholder="Анастасия">
-                        <input type="tel" name="userphone" class="input contacts__input phone" placeholder="8 (999) 123 45 58">
-                        <textarea name="usermessage" class="input contacts__textarea" id="usermessage" cols="30" rows="10" placeholder="Ваш вопрос..."></textarea>
+                     <form action="" class="contacts-form-js" id="contacts-form" onsubmit="ym(56518492, 'reachGoal', 'callback'); return true;">
+                        <div class="input-wrap">
+                           <input type="text" name="username" class="input contacts__input" placeholder="Анастасия">
+                        </div>
+                        <div class="input-wrap">
+                           <input type="tel" name="userphone" class="input contacts__input phone" placeholder="8 (999) 123 45 58">
+                        </div>
+                        <div class="input-wrap input-wrap__textarea">
+                           <textarea name="usermessage" class="input contacts__textarea" id="usermessage" cols="30" rows="10" placeholder="Ваш вопрос..."></textarea>
+                        </div>
                         <button class="btn btn_big">Отправить запрос</button>
                      </form>
                   </div>
@@ -485,17 +491,17 @@
                Отправьте заявку на прием в нашу <span class="footer-top__br"></span> стоматологическую клинику и наши сотрудники <span class="footer-top__br"></span> свяжутся с вами в ближайшее время
             </span>
             <div class="footer-top__form">
-               <form action="#" class="call-form" id="footer-form">
+               <form action="" class="call-form" id="footer-form" onsubmit="ym(55059709, 'reachGoal', 'request'); return true;">
                   <div class="call-form__fields">
-                     <div class="call-form__field">
+                     <div class="call-form__field input-wrap">
                         <img src="img/people.png" alt="" class="call-form__icon">
                         <input name="username" type="text" class="call-form__input" placeholder="Мария">
                      </div>
-                     <div class="call-form__field">
+                     <div class="call-form__field input-wrap">
                         <img src="img/phone.png" alt="" class="call-form__icon">
                         <input name="userphone" type="tel" class="call-form__input phone" placeholder="8 (999) 123 45 58">
                      </div>
-                     <div class="call-form__field">
+                     <div class="call-form__field input-wrap input-wrap__select">
                            <img src="img/clock.png" alt="" class="call-form__icon">
                         <!--<a href="#" class="call-form__link">Удобное время</a>
                         <img src="img/arrow-down.png" alt="" class="call-form__icon">-->
@@ -619,10 +625,16 @@
             </span>
          </div>
          <div class="modal__form">
-            <form action="#" class="modal-form-js" id="modal-form">
-               <input type="text" name="username" class="input modal__input" placeholder="Анастасия">
-               <input type="tel" name="userphone" class="input modal__input phone" placeholder="8 (999) 123 45 58">
-               <textarea name="usermessage" class="input modal__textarea" id="usermessage" cols="30" rows="10" placeholder="Ваш вопрос..."></textarea>
+            <form action="" class="modal-form-js" id="modal-form" onsubmit="ym(56518492, 'reachGoal', 'callback'); return true;">
+               <div class="input-wrap">
+                  <input type="text" name="username" class="input modal__input" placeholder="Анастасия">
+               </div>
+               <div class="input-wrap">
+                  <input type="tel" name="userphone" class="input modal__input phone" placeholder="8 (999) 123 45 58">
+               </div>
+               <div class="input-wrap input-wrap__textarea">
+                  <textarea name="usermessage" class="input modal__textarea" id="usermessage" cols="30" rows="10" placeholder="Ваш вопрос..."></textarea>
+               </div>
                <button class="btn btn_big modal__submit">Отправить запрос</button>
             </form>
          </div>

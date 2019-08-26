@@ -110,6 +110,31 @@ $container-size: 1200px
    &:focus
       border-color: $link-color
 
+   &-wrap
+      position: relative
+
+      &__select
+
+         & .invalid
+            top: -34px
+
+.call-form__field
+
+   & div.invalid
+      position: absolute
+      left: 50%
+      transform: translateX(-38%)
+      top: -30px
+      width: 90%
+      text-align: center
+      background-color: lighten(#f53426, 0.4)
+      color: #fff
+      padding: 4px 0
+      border-radius: 10px
+
+.call-form__input.invalid
+   border-bottom-color: #f53426
+
 textarea
    resize: none
    height: 128px
@@ -128,6 +153,11 @@ textarea
    .title
       font-size: 2.4286em
 
+   .call-form__field
+
+      & div.invalid
+         transform: translateX(-28%)
+
 @media (max-width: 991px)
    .container
       width: 740px
@@ -137,6 +167,12 @@ textarea
       &_big
          width: 60%
          margin: auto
+
+   .call-form__field
+
+      & div.invalid
+         transform: translateX(-50%)
+         width: 70%
 
 @media (max-width: 767px)
    .container
@@ -153,6 +189,13 @@ textarea
    .input
       padding: 10px 0 10px 25px
 
+      &-wrap
+
+         &__select
+
+            & .invalid
+               top: -24px
+
    .section
 
       &-title
@@ -162,3 +205,11 @@ textarea
 
       &_big
          width: 75%
+
+   .call-form__field
+
+      & div.invalid
+         transform: translateX(-35%)
+         width: 75%
+         padding: 2px 0
+         top: -20px

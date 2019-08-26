@@ -8,6 +8,21 @@
    display: none
    z-index: 1200
 
+   & div.invalid
+      position: absolute
+      bottom: -20px
+      left: 50%
+      transform: translateX(-50%)
+      width: 100%
+      text-align: center
+      color: #f53426
+      padding: 5px
+
+   & .input-wrap__textarea
+
+      & div.invalid
+         bottom: -20px
+
    &_active
       display: flex
 
@@ -118,3 +133,56 @@
 
             .times
                fill: $link-color
+
+@media (max-width: 767px)
+   .modal
+
+      &__dialog
+         width: 60%
+         padding: 25px
+
+      &__input
+         width: 80%
+
+      &__textarea
+         width: 80%
+         height: 60px
+
+   .success
+
+      &-dialog
+         padding: 30px 15px
+
+         &__message
+            font-size: 1.5em
+
+         &__smile
+            width: 25%
+
+@media (max-width: 575px)
+   .modal
+
+      &__dialog
+         padding-top: 55px
+
+      &__text
+         margin-bottom: 15px
+
+      &__title
+         margin-bottom: 15px
+
+      &__subtitle
+         max-width: 100%
+
+@media (max-width: 479px)
+   .modal
+
+      &__dialog
+         width: 75%
+
+      &__input, &__textarea
+         padding: 10px
+
+   .success
+      &-dialog
+         width: 75%

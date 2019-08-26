@@ -10,6 +10,7 @@ $data = $_POST;
 $username = $data['username'];
 $userphone = $data['userphone'];
 $time = $data['time'];
+$usermessage = $data['usermessage'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -24,13 +25,35 @@ $mail->Port = 465; // TCP port to connect to / этот порт может от
 $mail->setFrom('linkers017@yandex.ru'); // от кого будет уходить письмо?
 $mail->addAddress('romeo-gry@mail.ru');     // Кому будет уходить письмо
 
-$mail->Subject = 'Запись на прием';
-$mail->Body = "Поступила новая заявка от " . $username . " на " . $time . ".\n\nКонтактный телефон: " . $userphone;
+if($time != '') {
 
-if(!$mail->send()) {
-    echo $username;
-} else {
-   echo $username;
+    $mail->Subject = 'Запись на прием';
+    $mail->Body = "Поступила новая заявка от " . $username . " на " . $time . ".\n\nКонтактный телефон: " . $userphone;
+
+    if(!$mail->send()) {
+        echo '1 не отправил';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+       echo '1 отправил';
+    }
+
+} else if($usermessage != '') {
+
+    $mail->Subject = 'Пользователь оставил вопрос';
+    $mail->Body = "Поступил новый вопрос от клиента по имени:  " . $username . "\nКонтактный телефон: " . $userphone . "\n\nВопрос: " . $usermessage;
+
+    if(!$mail->send()) {
+        echo '2 не отправил';
+        echo 'Mailer Error: ' . $mail->ErrorInfo;
+    } else {
+       echo '2 отправил';
+    }
+
 }
+
+//$mail->Subject = 'Запись на прием';
+//$mail->Body = "Поступила новая заявка от " . $username . " на " . $time . ".\n\nКонтактный телефон: " . $userphone;
+
+
 
 ?>

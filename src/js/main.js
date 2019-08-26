@@ -53,6 +53,7 @@ $(function() {
    close.on('click', function() {
       
       modal.removeClass('modal_active');
+      $('#modal-form input, #modal-form textarea').val('');
 
    });
 
@@ -114,7 +115,7 @@ $(function() {
 
          time: {
 
-            required: "Выберите удобное время"
+            required: "Выберите время"
 
          }
 
@@ -131,6 +132,7 @@ $(function() {
             type: 'POST',
             data: $(form).serialize(),
             success: function(data) {
+               console.log(data);
 
                $('.success-js').fadeIn(2000);
                $('.message-js').text('Ваша заявка успешно отправлена.');
@@ -144,7 +146,7 @@ $(function() {
 
             }
 
-         })
+         });
 
       }
 
@@ -194,7 +196,7 @@ $(function() {
 
          time: {
 
-            required: "Выберите удобное время"
+            required: "Выберите время"
 
          }
 
@@ -211,19 +213,12 @@ $(function() {
             type: 'POST',
             data: $(form).serialize(),
             success: function(data) {
+               console.log(data);
 
-               $('.success-js').fadeIn(2000, function() {
-                  
-                  $(this).css('display', 'flex');
-
-               });
+               $('.success-js').fadeIn(2000);
                $('.message-js').text('Ваша заявка успешно отправлена.');
                $('#footer-form input, #footer-form select').val('');
-               $('.success-js').fadeOut(5000, function() {
-                  
-                  $(this).css('display', 'none');
-
-               });
+               $('.success-js').fadeOut(5000);
 
             },
             error: function(jqXHR, textStatus) {
@@ -232,7 +227,7 @@ $(function() {
 
             }
 
-         })
+         });
 
       }
 
@@ -284,7 +279,7 @@ $(function() {
          usermessage: {
 
             required: "Введите Ваш вопрос",
-            minlength: jQuery.validator.format("Минимум {0} символов"),
+            minlength: jQuery.validator.format("Минимум {0} символов")
 
          }
 
@@ -297,23 +292,16 @@ $(function() {
 
          $.ajax({
 
-            url: 'message.php',
+            url: 'send.php',
             type: 'POST',
             data: $(form).serialize(),
             success: function(data) {
+               console.log(data);
 
-               $('.success-js').fadeIn(2000, function() {
-                  
-                  $(this).css('display', 'flex');
-
-               });
+               $('.success-js').fadeIn(2000);
                $('.message-js').text('Благодарим Вас за вопрос.');
                $('#contacts-form input, #contacts-form textarea').val('');
-               $('.success-js').fadeOut(5000, function() {
-                  
-                  $(this).css('display', 'none');
-
-               });
+               $('.success-js').fadeOut(5000);
 
             },
             error: function(jqXHR, textStatus) {
@@ -322,7 +310,7 @@ $(function() {
 
             }
 
-         })
+         });
 
       }
 
@@ -374,7 +362,7 @@ $(function() {
          usermessage: {
 
             required: "Введите Ваш вопрос",
-            minlength: jQuery.validator.format("Минимум {0} символов"),
+            minlength: jQuery.validator.format("Минимум {0} символов")
 
          }
 
@@ -387,24 +375,17 @@ $(function() {
 
          $.ajax({
 
-            url: 'message.php',
+            url: 'send.php',
             type: 'POST',
             data: $(form).serialize(),
             success: function(data) {
+               console.log(data);
 
-               $('.success-js').fadeIn(2000, function() {
-                  
-                  $(this).css('display', 'flex');
-
-               });
+               $('.success-js').fadeIn(2000);
                $('.message-js').text('Благодарим Вас за вопрос.');
                $('#modal-form input, #modal-form textarea').val('');
                modal.removeClass('modal_active');
-               $('.success-js').fadeOut(5000, function() {
-                  
-                  $(this).css('display', 'none');
-
-               });
+               $('.success-js').fadeOut(5000);
 
             },
             error: function(jqXHR, textStatus) {
@@ -413,7 +394,7 @@ $(function() {
 
             }
 
-         })
+         });
 
       }
 

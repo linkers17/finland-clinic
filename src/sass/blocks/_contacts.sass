@@ -5,10 +5,11 @@
       display: flex
       justify-content: space-between
 
-   &__form, &__info
-      flex-basis: 48%
+   &__form
+      flex-basis: 47%
 
    &__info
+      flex-basis: 48%
       max-width: 48%
    
    &-form, &-info
@@ -31,12 +32,19 @@
 
       &__subtitle
          text-align: left
-         padding-right: 65px
+         padding-right: 50px
          margin-bottom: 90px
 
       &__form
          box-shadow: 0 10px 38px rgba(18, 31, 54, 0.07)
-         padding: 76px 85px 82px 74px
+         padding: 76px 75px 82px 74px
+
+         div.invalid
+            position: absolute
+            bottom: -5px
+            left: 5%
+            color: #f53426
+            padding: 5px
 
    &-info
 
@@ -94,6 +102,11 @@
          +reg
          color: #242424
          white-space: nowrap
+
+.input-wrap__textarea
+
+   & div.invalid
+      bottom: 20px
 
 @media (min-width: 992px)
 
@@ -157,6 +170,9 @@
 
          &__map-block
             margin-bottom: 0
+
+      &__input, &__textarea
+         width: 80%
 
 @media (max-width: 767px)
    .contacts
@@ -223,3 +239,6 @@
 
          &__description
             padding: 0 20px
+
+         &__numbers
+            max-width: 120px
